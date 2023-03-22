@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#181E28"
+    tools:ignore="MotionLayoutInvalidSceneFileReference">
+
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/profile_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/white"
+        android:foreground="@drawable/background_gradient"
+        android:src="@drawable/profile_img"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="@dimen/large_spacing"
+        android:layout_marginTop="@dimen/large_spacing"
+        android:src="@drawable/arrow_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/more"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="@dimen/large_spacing"
+        android:layout_marginEnd="@dimen/large_spacing"
+        android:src="@drawable/ic_baseline_more_vert_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/qr"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="@dimen/large_spacing"
+        android:src="@drawable/ic_baseline_qr_code_24"
+        app:layout_constraintEnd_toStartOf="@id/more"
+        app:layout_constraintTop_toTopOf="@id/more" />
+
+    <TextView
+        android:id="@+id/the_chance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/large_spacing"
+        android:layout_marginBottom="@dimen/margin_x_large"
+        android:text="@string/the_chance"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_main_name"
+        app:layout_constraintBottom_toBottomOf="@id/profile_image_view"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/online"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/online"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/the_chance"
+        app:layout_constraintTop_toBottomOf="@id/the_chance" />
+
+
+
+    <LinearLayout
+        android:id="@+id/main_linearlayout"
+        app:layout_constraintTop_toBottomOf="@id/profile_image_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/first_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_color"
+            android:orientation="vertical"
+            android:padding="@dimen/large_spacing"
+            android:paddingHorizontal="@dimen/large_spacing"
+            android:paddingTop="@dimen/large_spacing">
+
+
+            <TextView
+                android:id="@+id/account_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/account"
+                android:textColor="@color/title_text_color" />
+
+
+            <TextView
+                android:id="@+id/number_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/small_spacing"
+                android:text="@string/Your_phone_number"
+                android:textColor="@color/white" />
+
+
+            <TextView
+                android:id="@+id/Tap_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tap_to_change_phone_number"
+                android:textColor="@color/gray_text_font"
+                android:textSize="@dimen/small_text_size" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/small_spacing"
+                android:background="@color/line_color" />
+
+            <TextView
+                android:id="@+id/email_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large_spacing"
+                android:text="@string/your_email"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/username_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/username"
+                android:textColor="@color/gray_text_font"
+                android:textSize="@dimen/small_text_size" />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/small_spacing"
+                android:layout_marginBottom="@dimen/small_spacing"
+                android:background="@color/line_color" />
+
+            <TextView
+                android:id="@+id/your_bio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/your_bio_text"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/bio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bio"
+                android:textColor="@color/gray_text_font"
+                android:textSize="@dimen/small_text_size" />
+
+        </LinearLayout>
+
+
+
+
+        <!--    <androidx.core.widget.NestedScrollView-->
+        <!--        android:id="@+id/nested_scroll_view"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toTopOf="@id/line2">-->
+
+        <LinearLayout
+            android:id="@+id/settings_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_color"
+            android:orientation="vertical"
+            android:padding="@dimen/large_spacing"
+            android:paddingHorizontal="@dimen/large_spacing"
+>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings"
+                android:textColor="@color/title_text_color" />
+
+            <LinearLayout
+                android:id="@+id/notification_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/small_spacing">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/notification" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/large_spacing"
+                    android:text="@string/notifications_and_sounds"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/line_spacing"
+                android:layout_marginTop="@dimen/small_spacing"
+                android:background="@color/line_color"
+/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/small_spacing">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/lock" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/large_spacing"
+                    android:text="@string/privacy_and_security"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/line_spacing"
+                android:layout_marginTop="@dimen/small_spacing"
+                android:background="@color/line_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/small_spacing">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/storage" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/large_spacing"
+                    android:text="@string/data_and_storage"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/line_spacing"
+                android:layout_marginTop="@dimen/small_spacing"
+                android:background="@color/line_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/small_spacing">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/chat" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/large_spacing"
+                    android:text="@string/chat_settings"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/line_spacing"
+                android:layout_marginTop="@dimen/small_spacing"
+                android:background="@color/line_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/small_spacing">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/folder" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/large_spacing"
+                    android:text="@string/chat_folders"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/line_spacing"
+                android:layout_marginTop="@dimen/small_spacing"
+                android:background="@color/line_color"
+/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/small_spacing">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/devices" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/large_spacing"
+                    android:text="Devices"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--    </androidx.core.widget.NestedScrollView>-->
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
+
+
+    <!--    <androidx.constraintlayout.utils.widget.ImageFilterView-->
+    <!--        android:id="@+id/profile_image_view"-->
+    <!--        android:layout_width="65dp"-->
+    <!--        android:layout_height="65dp"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:background="@color/white"-->
+    <!--        android:src="@drawable/profile_img"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/arrow"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/arrow"-->
+    <!--        app:roundPercent="1"-->
+    <!--        app:shapeAppearanceOverlay="16dp" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/arrow"-->
+    <!--        android:layout_width="24dp"-->
+    <!--        android:layout_height="24dp"-->
+    <!--        android:layout_marginStart="@dimen/large_spacing"-->
+    <!--        android:layout_marginTop="24dp"-->
+    <!--        android:src="@drawable/arrow_left"-->
+    <!--        android:tint="@color/white"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/the_chance"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="16dp"-->
+    <!--        android:layout_marginTop="12dp"-->
+    <!--        android:text="The Chane"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        app:layout_constraintStart_toEndOf="@id/profile_image_view"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/profile_image_view" />-->
+
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="16dp"-->
+    <!--        android:text="online"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        app:layout_constraintStart_toEndOf="@id/profile_image_view"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/the_chance" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/more"-->
+    <!--        android:layout_width="24dp"-->
+    <!--        android:layout_height="24dp"-->
+    <!--        android:layout_marginEnd="@dimen/large_spacing"-->
+    <!--        android:src="@drawable/ic_baseline_more_vert_24"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@id/arrow"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/arrow" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/search"-->
+    <!--        android:layout_width="24dp"-->
+    <!--        android:layout_height="24dp"-->
+    <!--        android:layout_marginEnd="16dp"-->
+    <!--        android:src="@drawable/ic_baseline_search_24"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@id/arrow"-->
+    <!--        app:layout_constraintEnd_toStartOf="@id/more"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/arrow" />-->
+
+    <!--    <ImageView-->
+    <!--    android:id="@+id/qr"-->
+    <!--        android:layout_width="24dp"-->
+    <!--        android:layout_height="24dp"-->
+    <!--        android:layout_marginEnd="16dp"-->
+    <!--        android:src="@drawable/ic_baseline_qr_code_24"-->
+    <!--        android:tint="@color/white"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@id/arrow"-->
+    <!--        app:layout_constraintEnd_toStartOf="@id/search"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/arrow" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/camera_circle"-->
+    <!--        android:layout_width="32dp"-->
+    <!--        android:layout_height="32dp"-->
+    <!--        android:src="@drawable/camera_circle"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        android:layout_marginEnd="@dimen/large_spacing"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/first_linear_layout"-->
+    <!--        app:layout_constraintBottom_toTopOf="@id/first_linear_layout"/>-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/camera"-->
+    <!--        android:layout_width="24dp"-->
+    <!--        android:layout_height="24dp"-->
+    <!--        android:src="@drawable/camera"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@id/camera_circle"-->
+    <!--        app:layout_constraintEnd_toEndOf="@id/camera_circle"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/camera_circle"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/camera_circle" />-->
+    <!--    -->
